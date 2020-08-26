@@ -1,38 +1,41 @@
-Html Webpack Plugin:
-<pre>
-  Error: H:\CursosAlura\Aulas_JS\05_JS_Web_Criando_SPA_JavaScript_Puro\petshop/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js?:93
-    var style = document.createElement('style');
-                ^
-  ReferenceError: document is not defined
-  
-  - injectStylesIntoStyleTag.js?:93 insertStyleElement
-    [.]/[style-loader]/dist/runtime/injectStylesIntoStyleTag.js?:93:15
-  
-  - injectStylesIntoStyleTag.js?:208 addStyle
-    [.]/[style-loader]/dist/runtime/injectStylesIntoStyleTag.js?:208:13
-  
-  - injectStylesIntoStyleTag.js?:81 modulesToDom
-    [.]/[style-loader]/dist/runtime/injectStylesIntoStyleTag.js?:81:18
-  
-  - injectStylesIntoStyleTag.js?:239 module.exports
-    [.]/[style-loader]/dist/runtime/injectStylesIntoStyleTag.js?:239:25
-  
-  - clientes.css?:15 eval
-    H:\CursosAlura\Aulas_JS\05_JS_Web_Criando_SPA_JavaScript_Puro\petshop/src/assets/css/clientes.css?:15:14
-  
-  - clientes.html:156 Object../src/assets/css/clientes.css
-    H:/CursosAlura/Aulas_JS/05_JS_Web_Criando_SPA_JavaScript_Puro/petshop/src/clientes.html:156:1
-  
-  - clientes.html:21 __webpack_require__
-    H:/CursosAlura/Aulas_JS/05_JS_Web_Criando_SPA_JavaScript_Puro/petshop/src/clientes.html:21:30
-  
-  - loader.js:3 eval
-    [clientes.html?.]/[html-webpack-plugin]/lib/loader.js:3:34
-  
-  - clientes.html:133 Object../node_modules/html-webpack-plugin/lib/loader.js!./src/clientes.html
-    H:/CursosAlura/Aulas_JS/05_JS_Web_Criando_SPA_JavaScript_Puro/petshop/src/clientes.html:133:1
-  
-  - clientes.html:21 __webpack_require__
-    H:/CursosAlura/Aulas_JS/05_JS_Web_Criando_SPA_JavaScript_Puro/petshop/src/clientes.html:21:30
-  
-</pre>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet" />
+    <title>PetShop!</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="doguinho.png" width="50" height="50" class="d-inline-block align-top" alt="" /> PetShop!
+        </a>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Clientes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pets</a>
+            </li>
+        </ul>
+    </nav>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">CPF</th>
+                <th scope="col">Nome</th>
+                <th scope="col"></th>
+                <th><a class="btn btn-primary" href="componentes/cadastro/cadastro-clientes.html">Novo Cliente</a></th>
+            </tr>
+        </thead>
+        <tbody data-conteudo-tabela></tbody>
+    </table>
+<script src="main.js"></script></body>
+
+</html>
