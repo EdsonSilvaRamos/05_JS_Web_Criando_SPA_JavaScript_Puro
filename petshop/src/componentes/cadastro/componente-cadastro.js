@@ -1,7 +1,8 @@
 const { default: eventoEnvia } = require('./cadastro-clientes');
 
-const form = document.createElement("form");
-const cadastro = `<div class = "container"> 
+const inicializaCadastro = () => {
+    const form = document.createElement("form");
+    const cadastro = `<div class = "container"> 
                     <div class = "form-group">
                         <label>CPF</label>
                         <input type="number" class="form-control" data-cpf placeholder="Digite seu CPF aqui"/>
@@ -13,13 +14,8 @@ const cadastro = `<div class = "container">
                     <button type="submit" class="btn btn-primary">Enviar</button> 
                   </div>`;
 
-form.innerHTML = cadastro;
-
-const inicializaCadastro = () => {
-    const container = document.querySelector("[data-container]");
+    form.innerHTML = cadastro;
     eventoEnvia(form);
-    container.innerHTML = "";
-    container.appendChild(form);
     return form;
 }
 
